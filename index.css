@@ -1,0 +1,63 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 0 0% 88%;
+
+    --card: 222 47% 13%;
+    --card-foreground: 0 0% 88%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 0 0% 88%;
+
+    --primary: 196 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 58% 39%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 222 47% 20%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 260 58% 39%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 47% 20%;
+    --input: 222 47% 20%;
+    --ring: 196 100% 50%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-cyber-navy text-cyber-text;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .cyber-border {
+    @apply border border-cyber-cyan/30 shadow-[0_0_10px_rgba(0,229,255,0.3)];
+  }
+  
+  .cyber-glow {
+    @apply shadow-[0_0_10px_rgba(0,229,255,0.5)];
+  }
+  
+  .cyber-text-glow {
+    @apply text-cyber-cyan drop-shadow-[0_0_8px_rgba(0,229,255,0.7)];
+  }
+}
